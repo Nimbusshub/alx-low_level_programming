@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- *main - determine if number is positive or negative
- * Description: Program will assign a random number when executed
+ * main - print numbers in base 10
+ * Description: Print numbers in base 10
  * Return: Always 0 (Success)
  *
  */
@@ -12,17 +10,16 @@ int main(void)
 {
 	int n;
 
-	srand(time(0));
+	n = 0;
+	while (n < 10)
+	{
+		putchar(n);
+		n++;
+	}
 
-	n = rand() - RAND_MAX / 2;
-	if (n == 0)
-		printf("%d is zero\n", n);
-	else if (n >= 1)
-		printf("%d is positive\n", n);
-	else
-		printf("%d is negative\n", n);
+	putchar(10);
+
 	return (0);
-
 
 
 }
