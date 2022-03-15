@@ -1,25 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
- * Return: Always 0 (Success)
+ * print_last_digit - returns the value of the last digit
+ * @n: integer of last digit
+ * Description: Program returns last digit value
+ * Return: integer  (Success)
  *
  */
-int main(void)
+int print_last_digit(int n)
 {
-	char alphab;
+	int l = n % 10;
 
-	alphab = 'a';
-	while (alphab <= 'z')
+	if (n < 0)
 	{
-		putchar(alphab);
-		alphab++;
+		l = l * -1;
 	}
-	putchar(10);
-	return (0);
-
-
-
+	_putchar(l + '0');
+	return (l);
 }
 
