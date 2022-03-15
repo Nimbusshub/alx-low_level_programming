@@ -1,25 +1,20 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
- * Return: Always 0 (Success)
+ * _isalpha - print alphabets in lower or upper case
+ * @c: Program will print alphabets
+ * Return: 1 if (Success)
  *
  */
-int main(void)
+int _isalpha(int c)
 {
-	char alphab;
-
-	alphab = 'a';
-	while (alphab <= 'z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		putchar(alphab);
-		alphab++;
+		return (1);
 	}
-	putchar(10);
-	return (0);
-
-
+	else
+	{
+		return (0);
+	}
 
 }
 
