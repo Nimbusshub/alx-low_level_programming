@@ -1,23 +1,36 @@
-#include <stdio.h>
+#include "main.l"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
+ * jack_bauer - a function that prints every minute of the day of
+ * Jack Bauer
+ * Description: Program will print every minutes of the time
  * Return: Always 0 (Success)
- *
  */
-int main(void)
+void jack_bauer(void);
 {
-	char alphab;
+	int a, b, c, d;
 
-	alphab = 'a';
-	while (alphab <= 'z')
+	for (a = 48; a <= 50; a++)
 	{
-		putchar(alphab);
-		alphab++;
+		for (b = 48; b <= 57; b++)
+		{
+			for (c = 48; c <= 53; c++)
+			{
+				for (d = 48; d <= 57, d++)
+				{
+					if (a >= 50 && b >= 52)
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-	putchar(10);
-	return (0);
+
 
 
 
