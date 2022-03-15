@@ -1,23 +1,24 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
+ * _abs - a function that computes the absolute value of an integer
+ * @n: n is an integer
  * Return: Always 0 (Success)
  *
  */
-int main(void)
+int _abs(int n)
 {
-	char alphab;
-
-	alphab = 'a';
-	while (alphab <= 'z')
+	if (n > 0)
 	{
-		putchar(alphab);
-		alphab++;
+		return (n);
 	}
-	putchar(10);
-	return (0);
+	else if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 
 
 
