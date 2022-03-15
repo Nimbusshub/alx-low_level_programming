@@ -7,13 +7,13 @@
  */
 void print_alphabet(void)
 {
-	char alphab[26] = "abcdefghijklmnopqrstuvwxyz";
+	char i = 'a';
 
-	_putchar(alphab);
+	while (i <= 'z')
+	{
+		_putchar(i);
+		i++;
+	}
 	_putchar(10);
-	return (0);
-
-
-
 }
 
