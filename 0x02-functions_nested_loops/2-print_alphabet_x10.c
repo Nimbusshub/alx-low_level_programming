@@ -1,25 +1,27 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
+ * print_alphabet_x10 - print alphabets in lower case ten times
+ * Description: Program will print alphabets in lower case ten times
  * Return: Always 0 (Success)
  *
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	char alphab;
+	char alphabet = 'a';
+	int again = 0;
 
-	alphab = 'a';
-	while (alphab <= 'z')
+	while (again < 10)
 	{
-		putchar(alphab);
-		alphab++;
+		alphabet = 'a';
+		while (alphabet <= 'z')
+		{
+			_putchar(alphabet);
+			alphabet++;
+		}
+		_putchar(10);
+		again++;
 	}
-	putchar(10);
-	return (0);
-
-
 
 }
 
