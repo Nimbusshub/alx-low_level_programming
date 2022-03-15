@@ -1,25 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
- * Return: Always 0 (Success)
+ *_islower  - check if alphabets is in lower case
+ * @c: c is an ascii character
+ * Description:  Program will print 1 if alphabets is in lower case
+ * or 0 otherwise
+ * Return: 1 if lowercase (Success)
  *
  */
-int main(void)
+int _islower(int c)
 {
-	char alphab;
-
-	alphab = 'a';
-	while (alphab <= 'z')
+	if (c >= 'a' && c >= 'z')
 	{
-		putchar(alphab);
-		alphab++;
+		return (1);
 	}
-	putchar(10);
-	return (0);
-
-
+	else
+	{
+		return (0);
+	}
 
 }
 
