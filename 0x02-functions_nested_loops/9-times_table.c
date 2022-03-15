@@ -1,25 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
- * Return: Always 0 (Success)
+ * times_table - prints multiplication table from 0 to 9
+ * Description: Muplication table 0 to 9
+ * Return: No return (Success)
  *
  */
-int main(void)
+void times_table(void)
 {
-	char alphab;
+	int a, b, op;
 
-	alphab = 'a';
-	while (alphab <= 'z')
+	for (a = 0; a <= 9; a++)
 	{
-		putchar(alphab);
-		alphab++;
+		_putchar(48);
+		for (b = 1; b <= 9; b++)
+		{
+			op = a * b;
+			_putchar(44);
+			_putchar(32);
+			if (op <= 9)
+			{
+				_putchar(32);
+				_putchar(op + 48);
+			}
+			else
+			{
+				_putchar((op / 10) + 48);
+				_putchar((op % 10) + 48);
+			}
+		}
+		_putchar('\n');
 	}
-	putchar(10);
-	return (0);
-
-
-
 }
 
