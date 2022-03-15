@@ -1,25 +1,28 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
- * Return: Always 0 (Success)
+ * print_sign - Function will print sign '+' '-' or '0' depending
+ * on the value of n
+ * @n: n is an integer
+ * Return: 1 or 2 or 0 (Success)
  *
  */
-int main(void)
+int print_sign(int n)
 {
-	char alphab;
-
-	alphab = 'a';
-	while (alphab <= 'z')
+	if (n > 0)
 	{
-		putchar(alphab);
-		alphab++;
+		_putchar('+');
+		return (1);
 	}
-	putchar(10);
-	return (0);
-
-
+	else if (n < 0)
+	{
+		_putchar('-');
+		return (-1);
+	}
+	else
+	{
+		_putchar(0);
+		return (0);
+	}
 
 }
-
