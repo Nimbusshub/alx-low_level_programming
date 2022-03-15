@@ -1,22 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
+ * print_alphabet -  Program will print alphabets with the prototype
  * Return: Always 0 (Success)
  *
  */
-int main(void)
+void print_alphabet(void)
 {
-	char alphab;
+	char alphab[26] = "abcdefghijklmnopqrstuvwxyz";
 
-	alphab = 'a';
-	while (alphab <= 'z')
-	{
-		putchar(alphab);
-		alphab++;
-	}
-	putchar(10);
+	_putchar(alphab);
+	_putchar(10);
 	return (0);
 
 
