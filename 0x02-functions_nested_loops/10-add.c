@@ -1,25 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *main - print alphabets in lower case
- * Description: Program will print alphabets in lower case
+ * add - adds two numbers together
+ * Description: Program will add two numbers
+ * @n1: integer 1
+ * @n2: integer 2
  * Return: Always 0 (Success)
- *
  */
-int main(void)
+int add(int n1, int n2)
 {
-	char alphab;
+	int sum;
 
-	alphab = 'a';
-	while (alphab <= 'z')
-	{
-		putchar(alphab);
-		alphab++;
-	}
-	putchar(10);
-	return (0);
-
-
-
+	sum = n1 + n2;
+	return (sum);
 }
 
