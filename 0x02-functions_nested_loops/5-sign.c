@@ -4,7 +4,7 @@
  * print_sign - Function will print sign '+' '-' or '0' depending
  * on the value of n
  * @n: n is an integer
- * Return: 1 or 2 or 0 (Success)
+ * Return: 1 , 0 or -1 (Success)
  *
  */
 int print_sign(int n)
