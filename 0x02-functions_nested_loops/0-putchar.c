@@ -8,11 +8,13 @@
  */
 int main(void)
 {
-	char alphabs[9] = "_putchar";
+	char alphab[9] = "_putchar";
 
-	for (int i = 0; i < 8; i++)
+	int i = 0;
+
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(text[i]);
+		_putchar(alphab[i]);
 	}
 	_putchar(10);
 	return (0);
