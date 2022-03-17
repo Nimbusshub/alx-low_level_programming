@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-	printf("%d\n", mul(-402, 4096));
-	printf("%d\n", mul(98, 1024));
+	print_numbers();
 	return (0);
 }
