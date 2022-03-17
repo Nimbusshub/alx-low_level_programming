@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
+ *_isdigit  - check if number is digit 0 to 9
  * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
+ * Description:  Program will return 1 if input is digit 0 to 1
+ * else it will return 0
+ * Return: 1 if digit else 0 (Success)
  *
  */
-int _islower(int c)
+int _isdigit(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 48 && c < 58)
 	{
 		return (1);
 	}
