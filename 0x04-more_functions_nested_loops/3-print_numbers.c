@@ -1,23 +1,19 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
+ * print_numbers - prints number 0 to 9
+ * Description:  Program will print number 1 to 9 when called upon
+ * Return: void (Success)
  *
  */
-int _islower(int c)
+
+void print_numbers(void)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int c;
 
+	for (c = '0'; c < '10'; c++)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
 }
-
