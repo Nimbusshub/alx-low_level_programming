@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
+ * more_numbers - prints number 1 to 14 10 times
+ * Description:  Program will print number 1 to 14 10 times
+ * when called upon
+ * Return: void (Success)
  *
  */
-int _islower(int c)
+void more_numbers(void)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int c;
+	int round = 0;
 
+	while (round <= 9)
+	{
+		c = 0;
+		while (c <= 14)
+		{
+			_putchar(c);
+			c++;
+		}
+		_putchar('\n');
+		round++;
 }
-
