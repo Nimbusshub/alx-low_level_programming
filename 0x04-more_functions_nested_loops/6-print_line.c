@@ -1,23 +1,20 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
+ * print_line - prints line
+ * @n: length of the line
  *
+ * Return: void (Success)
  */
-int _islower(int c)
+void print_line(int n)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int l;
 
+	l = 0;
+	while (l < n)
+	{
+		_putchar('_');
+		l++;
+	}
+	_putchar('\n');
 }
-
