@@ -1,23 +1,18 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
+ * mul  - multiplies two integers
+ * @a: first integer declared
+ * @b: second integer declared
+ * Description:  Program will multiply two integers
+ * Return: number (The product of two integers)
  *
  */
-int _islower(int c)
+int mul(int a, int b)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int number;
 
+	number = a * b;
+	return (number);
 }
 
