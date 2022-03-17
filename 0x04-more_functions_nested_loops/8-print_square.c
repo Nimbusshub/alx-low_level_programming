@@ -1,23 +1,29 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
+ * print_square - draws a square
+ * @size: is the length of the square
+ * Description:  Program will print square
  * Return: 1 if lowercase (Success)
- *
  */
-int _islower(int c)
+void print_square(int size)
 {
-	if (c >= 'a' && c <= 'z')
+	int row;
+	int column;
+
+	if (size > 0)
 	{
-		return (1);
+		for (row = 0; row < size; row++)
+		{
+			for (column = 0; column < size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
 	}
 	else
 	{
-		return (0);
+		_putchar('\n');
 	}
-
 }
-
