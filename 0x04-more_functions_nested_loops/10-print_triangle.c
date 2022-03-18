@@ -1,23 +1,35 @@
 #include "main.h"
 
 /**
- *_islower  - check if alphabets is in lower case
- * @c: c is an ascii character
- * Description:  Program will print 1 if alphabets is in lower case
- * or 0 otherwise
- * Return: 1 if lowercase (Success)
- *
+ * print_triangle - function prints triangle
+ * @size: size of triangle
+ * Description:  Program will print triangle with hashes
+ * Return: void (Success)
  */
-int _islower(int c)
+void print_triangle(int size)
 {
-	if (c >= 'a' && c <= 'z')
+	int line = 0;
+	int spaces;
+	int hashes;
+
+	if (size > 0)
 	{
-		return (1);
+		while (line < size)
+		{
+			for (spaces = size - 1; spaces > line; spaces--)
+			{
+				_putchar(' ');
+			}
+			for (hashes = 0; hashes < line + 1; hashes++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+			line++;
+		}
 	}
 	else
 	{
-		return (0);
+		_putchar('\n');
 	}
-
 }
-
