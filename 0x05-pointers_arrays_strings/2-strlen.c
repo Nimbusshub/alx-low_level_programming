@@ -2,10 +2,10 @@
 
 /**
  * _strlen - counts and prints the length of string
- * @s: is a pointer
+ * @str: is a pointer
  * Return: count (Success)
  */
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int count = 0;
 
