@@ -1,23 +1,18 @@
 #include "main.h"
 
 /**
- *_isdigit  - check if number is digit 0 to 9
- * @c: c is an ascii character
- * Description:  Program will return 1 if input is digit 0 to 1
- * else it will return 0
- * Return: 1 if digit else 0 (Success)
- *
+ * _puts - prints out all strings followed by a new line
+ * @str: is a pointer
+ * Return: string with a new line (Success)
  */
-int _isdigit(int c)
+void _puts(char *str)
 {
-	if (c >= 48 && c < 58)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int a = 0;
 
+	while (str[a] != '\0')
+	{
+		_putchar(str[a]);
+		a++;
+	}
+	_putchar('\n');
 }
-
