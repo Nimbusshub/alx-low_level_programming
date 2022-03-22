@@ -1,5 +1,5 @@
 #include "main.h"
-#incude <stdio.h>
+#include <stdio.h>
 
 /**
  * print_array - a function that prints arrays
