@@ -1,23 +1,29 @@
 #include "main.h"
 
 /**
- *_isdigit  - check if number is digit 0 to 9
- * @c: c is an ascii character
- * Description:  Program will return 1 if input is digit 0 to 1
- * else it will return 0
- * Return: 1 if digit else 0 (Success)
- *
+ * rev_string - prints half variable
+ * @s: pointer
+ * Return: half
  */
-int _isdigit(int c)
+void rev_string(char *s)
 {
-	if (c >= 48 && c < 58)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int i, max, half;
+	char first, last;
 
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	max = i - 1;
+	half = max / 2;
+	while (half >= 0)
+	{
+		first = s[max - half];
+		last = s[half];
+		s[half] = first;
+		s[max - half] = last;
+		half--;
+	}
 }
 
