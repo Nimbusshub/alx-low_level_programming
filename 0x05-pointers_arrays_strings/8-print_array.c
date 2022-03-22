@@ -1,23 +1,20 @@
 #include "main.h"
 
 /**
- *_isdigit  - check if number is digit 0 to 9
- * @c: c is an ascii character
- * Description:  Program will return 1 if input is digit 0 to 1
- * else it will return 0
- * Return: 1 if digit else 0 (Success)
- *
+ * print_array - a function that prints arrays
+ * @a: is a pointer
+ * @n: is an array
+ * Return: arrays (Success)
  */
-int _isdigit(int c)
+void print_array(int *a, int n)
 {
-	if (c >= 48 && c < 58)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int i = 0;
 
+	for (; i < n; i++)
+	{
+		printf("%d", *(a + i));
+		if (i != (n - 1))
+			printf(", ");
+	}
+			printf("\n");
 }
-
