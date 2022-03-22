@@ -1,23 +1,24 @@
 #include "main.h"
 
 /**
- *_isdigit  - check if number is digit 0 to 9
- * @c: c is an ascii character
- * Description:  Program will return 1 if input is digit 0 to 1
- * else it will return 0
- * Return: 1 if digit else 0 (Success)
- *
+ * print_rev - prints string in reverse order
+ * @s: is a pointer
+ * Return: reverse string (Success)
  */
-int _isdigit(int c)
+void print_rev(char *s)
 {
-	if (c >= 48 && c < 58)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int count = 0;
 
+	while (count >= 0)
+	{
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+	for (count--; count >= 0; count--)
+	{
+		_putchar(s[count]);
+	}
+	_putchar('\n');
 }
 
