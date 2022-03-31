@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * factorial(int n) - print the factors of n
+ * factorial - print the factors of n
  * @n: number the factor will start from
  * Return: the factors (success)
  */
