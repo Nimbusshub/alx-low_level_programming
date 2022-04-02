@@ -9,21 +9,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, result = 0;
+	int i, j, add = 0;
 
-	if (argc == 1)
-		printf("0\n");
 	for (i = 1; i < argc; i++)
 	{
-		int x = strtol(argv[i], NULL, 10);
-
-		if (isdigit(argv[i]) == 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		result = result + x;
+		add += atoi(argv[i]);
 	}
-	printf("%d\n", result);
+	printf("%d\n", add);
 	return (0);
 }
