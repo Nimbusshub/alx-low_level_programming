@@ -1,0 +1,1 @@
+Directory contains tasks on malloc and free. Both a built in functions in standard library. malloc is used in the task to dynamically allocate memory to a pointer in the heap memory while free is used to deallocate the allocated memory blocks.
