@@ -23,8 +23,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (pointer == NULL)
 	{
-		free(pointer);
 		return (NULL);
+		free(pointer);
 	}
 	while (index < len1)
 	{
