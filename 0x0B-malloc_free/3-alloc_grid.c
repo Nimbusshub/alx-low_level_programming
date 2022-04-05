@@ -1,34 +1,38 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _strdup - duplicates a string
- * @str: a pointer to a string
+ * alloc_grid - prints and allocate a grid to 0
+ * @width: the width of the the grid
+ * @height: the height of the grid
  * Return: pointer (Success)
  */
-char *_strdup(char *str)
+int **alloc_grid(int width, int height)
 {
-	int count = 0, len = 0, index = 0, index2 = 0;
-	char *pointer;
+	int **gridout;
+	int i, j;
 
-	if (str == NULL)
+	if (width < 1 || height < 1)
+		return (NULL);
+	gridout = malloc(height * sizeof(int *));
+	if (gridout == NULL)
 	{
+		free(gridout);
 		return (NULL);
 	}
-	while (str[index] != '\0')
+	for (i = 0; i < height; i++)
 	{
-		count++;
-		index++;
+		gridout[i] = malloc(width * sizeof(int));
+		if (gridout[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(gridout[i]);
+			free(gridout);
+			return (NULL);
+		}
 	}
-	len = count;
-	pointer = (char *)malloc(sizeof(char) * (len + 1));
-
-	if (pointer == NULL)
-		return (NULL);
-	while (index2 < len)
-	{
-		*(pointer + index2) = *(str + index2);
-		index2++;
-	}
-	return (pointer);
-	free(pointer);
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+			gridout[i][j] = 0;
+	return (gridout);
 }
+
