@@ -43,6 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		index++;
 		index2++;
 	}
+	*(pointer + index) = '\0';
 	return (pointer);
 	free(pointer);
 }
