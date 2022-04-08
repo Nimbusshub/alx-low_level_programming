@@ -11,14 +11,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *pointer;
-	int i = 0;
+	unsigned int i = 0;
 
 	if ((nmemb == 0) || (size == 0))
 		return (NULL);
-	pointer = malloc(nmemb * size + 1);
+	pointer = malloc(nmemb * size);
 	if (pointer == NULL)
 		return (NULL);
-	while (pointer[i] != pointer[nmemb])
+	while (i < (nmemb * size))
 	{
 		*(pointer + i) = 0;
 		i++;
