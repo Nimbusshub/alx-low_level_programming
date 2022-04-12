@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * new_dog - function to create a new dog
  * @name: first member
