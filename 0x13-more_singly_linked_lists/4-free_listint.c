@@ -10,7 +10,7 @@ void free_listint(listint_t *head)
 {
 	listint_t *agent_clear, *temp = head;
 
-	while (temp->next != NULL)
+	while (temp != NULL)
 	{
 		agent_clear = temp;
 		temp = temp->next;
