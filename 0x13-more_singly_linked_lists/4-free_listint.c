@@ -16,6 +16,5 @@ void free_listint(listint_t *head)
 		temp = temp->next;
 		free(agent_clear);
 	}
-	head = NULL;
 	free(temp);
 }
