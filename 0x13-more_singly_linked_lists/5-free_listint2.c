@@ -10,12 +10,15 @@ void free_listint2(listint_t **head)
 {
 	listint_t *agent_clear, *temp = *head;
 
-	while (temp != NULL)
+	if (*head)
 	{
-		agent_clear = temp;
-		temp = temp->next;
-		free(agent_clear);
+		while (temp != NULL)
+		{
+			agent_clear = temp;
+			temp = temp->next;
+			free(agent_clear);
+		}
+		*head = NULL;
+		free(temp);
 	}
-	*head = NULL;
-	free(temp);
 }
