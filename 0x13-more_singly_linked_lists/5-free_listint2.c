@@ -10,8 +10,6 @@ void free_listint2(listint_t **head)
 {
 	listint_t *agent_clear, *temp;
 
-	if (head == NULL)
-		return;
 	if (head)
 	{
 		temp = *head;
@@ -22,5 +20,6 @@ void free_listint2(listint_t **head)
 			free(agent_clear);
 		}
 		*head = NULL;
+		free(temp);
 	}
 }
