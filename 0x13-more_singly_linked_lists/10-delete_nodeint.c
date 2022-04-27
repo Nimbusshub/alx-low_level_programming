@@ -20,22 +20,22 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		{
 			tmp = *head;
 			*head = (*head)->next;
-			free(temp);
+			free(tmp);
 		}
 
 		else
 		{
 			agent_clear = *head;
-			for (; i < index - 1 && agent->next != NULL; i++)
+			for (; i < index && agent_clear->next != NULL; i++)
 			{
 				prevV = agent_clear;
 				agent_clear = agent_clear->next;
 			}
-			temp = agent_clear->next;
-			prevV->next = temp;
+			tmp = agent_clear->next;
+			prevV->next = tmp;
 			free(agent_clear);
 		}
 		return (1);
 	}
-	return (0);
+	return (-1);
 }
