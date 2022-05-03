@@ -23,13 +23,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	m = read(file, s, letters);
 	s[m] = '\0';
 	i = write(STDIN_FILENO, s, m);
-	if (file < 0 || m != i)
+	if (file == -1 || m != i)
 	{
 		free(s);
 		return (0);
 	}
 	close(file);
 	free(s);
-	return (m);
+	return (i);
 }
 
