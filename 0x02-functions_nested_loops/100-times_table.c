@@ -21,7 +21,7 @@ void print_times_table(int n)
 				if (i < n + 1 && j < n)
 				{
 					putchar(',');
-					putchar(' ');
+					printf("   ");
 				}
 			}
 			putchar('\n');
