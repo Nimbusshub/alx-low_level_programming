@@ -10,7 +10,6 @@ int main(void)
 {
 	long int container = 612852475143;
 	long int i = 2;
-	int prime = 0;
 
 	while (i <= container)
 	{
