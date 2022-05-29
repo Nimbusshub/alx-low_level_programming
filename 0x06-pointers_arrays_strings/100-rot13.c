@@ -27,7 +27,7 @@ char *rot13(char *str)
 			}
 			else if (str[i] == upperRot[j])
 			{
-				str[i] == upperCode[j];
+				str[i] = upperCode[j];
 				break;
 			}
 			else if (str[i] == lowerCode[j])
