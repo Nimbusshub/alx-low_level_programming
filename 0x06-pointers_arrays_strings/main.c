@@ -2,21 +2,16 @@
 
 int main(void)
 {
-	char s[] = "Abj gung lbh'er qbar jvgu lbhe qbar jvgu lbhe hqrzl cebwrpg, jung'f arkg ba gur ntraqn?\n";
-	/* char ans[] = "To get to the other side\n"; */
-	char *p;
-
-	p = rot13(s);
-
-	printf("%s", p);
-	
-	/* p = rot13(ans);
-	printf("%s", ans);
-	printf("%s", p);
-
-	p = rot13(ans);
-	printf("%s", ans);
-	printf("%s", p);*/
+	print_number(98);
+	putchar('\n');
+	print_number(-55355);
+	putchar('\n');
+	print_number(INT_MAX);
+	putchar('\n');
+	print_number(INT_MIN);
+	putchar('\n');
+	print_number(45678);
+	putchar('\n');
 
 	return (0);
 }
