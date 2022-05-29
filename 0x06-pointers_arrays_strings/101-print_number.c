@@ -32,11 +32,11 @@ void print_number(int n)
 			break;
 		if (flag == 1)
 		{
-			putchar('-');
+			_putchar('-');
 			flag = 0;
 		}
 		container = num2 / m;
-		putchar(container + 48);
+		_putchar(container + 48);
 		num2 = num2 % m;
 	}
 }
