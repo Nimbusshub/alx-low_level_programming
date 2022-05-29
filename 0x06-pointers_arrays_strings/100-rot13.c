@@ -9,41 +9,25 @@
 
 char *rot13(char *str)
 {
-	char upperCode[] = "ABCDEFGHIJKLM";
-	char upperRot[] = "NOPQRSTUVWXYZ";
-	char lowerCode[] = "abcdefghijklm";
-	char lowerRot[] = "nopqrstuvwxyz";
+	char encrypt[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char decrypt[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0, j;
 
 	while (str[i])
-	{	j = 0;
-
-		while (j < 13)
+	{
+		j = 0;
+		while (encrypt[j])
 		{
-			if (str[i] == upperCode[j])
+			if (str[i] == encrypt[j])
 			{
-				str[i] = upperRot[j];
-				break;
-			}
-			else if (str[i] == upperRot[j])
-			{
-				str[i] = upperCode[j];
-				break;
-			}
-			else if (str[i] == lowerCode[j])
-			{
-				str[i] = lowerRot[j];
-				break;
-			}
-			else if (str[i] == lowerRot[j])
-			{
-				str[i] = lowerCode[j];
+				str[i] = decrypt[j];
 				break;
 			}
 			j++;
 		}
 		i++;
 	}
+
 	str[i] = '\0';
 	return (str);
 }
