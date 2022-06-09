@@ -9,7 +9,7 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *head1 = head;
-	unsigned int i = 0; 
+	unsigned int i = 0;
 	int flag = 0;
 
 	if (!head)
