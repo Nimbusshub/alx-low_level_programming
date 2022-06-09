@@ -22,5 +22,6 @@ typedef struct func
 	struct func *prev;
 } dlistint_t;
 
+size_t print_dlistint(const dlistint_t *h);
 
 #endif /* _LISTS_H_ */
