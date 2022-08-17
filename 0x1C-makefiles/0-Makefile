@@ -1,11 +1,9 @@
 .PHONY: all clean
 all: school
 
-Objects := school.c main.c		#the object files to compile
-CC := gcc		#c command to compile
 
 school:
-	${CC} ${Objects} -o $@
+	gcc main.c school.c -o $@
 	
 	
 clean:
