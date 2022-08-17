@@ -1,0 +1,12 @@
+.PHONY: all clean
+all: school
+
+SRC := school.c main.c		#the object files to compile
+CC := gcc		#c command to compile
+
+school:
+	${CC} ${SRC} -o $@
+	
+	
+clean:
+	rm -f school
