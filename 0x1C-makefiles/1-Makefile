@@ -1,9 +1,7 @@
-.PHONY: all clean
+.PHONY: all
 
-SRC := ${wildcard *.c}	#the object files to compile
+SRC := ${wildcard *.c}
+CC := gcc
 
 all:
 	${CC} ${SRC} -o school
-	
-clean:
-	rm -f school
